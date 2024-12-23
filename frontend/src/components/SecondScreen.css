@@ -1,0 +1,57 @@
+.second-container {
+    padding: 20px;
+    background-image: url('https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30436.jpg?semt=ais_hybrid'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .info-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .info-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .info-section p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .input-section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .input-section input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .cta-button-container {
+    text-align: center;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  

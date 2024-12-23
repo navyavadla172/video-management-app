@@ -1,0 +1,86 @@
+.fourth-screen-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/premium-vector/background-images-free-download-freepik_689361-61.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-buttons,
+.profile-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-button,
+.profile-button {
+    padding: 10px 15px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover,
+.profile-button:hover {
+    background-color: rgba(0, 86, 179, 0.8);
+}
+
+.video-details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.video-player {
+    width: 60%;
+}
+
+.video-player-element {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-metadata {
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metadata-item {
+    margin-bottom: 20px;
+}
+
+.metadata-item h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.metadata-item p {
+    font-size: 16px;
+    color: #555;
+}
