@@ -5,25 +5,26 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 
-// Access MongoDB URI from environment variables
-const MONGO_URI = process.env.MONGO_URI;
+// Mock MongoDB connection (remove actual MongoDB connection)
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/mockdb'; // Mock connection
 
-// MongoDB connection
+// Mock MongoDB connection (to simulate the connection without using actual MongoDB)
+const mockDatabase = []; // Simple array to simulate a database
+
+// MongoDB connection simulation
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
   .then(() => {
-    console.log('Database connected');
+    console.log('Database connected (mock)');
   })
   .catch(err => {
     console.error('Database connection error:', err);
   });
 
-// Access JWT_SECRET and other Google credentials
-const JWT_SECRET = process.env.JWT_SECRET;
-const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
-const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
+// Access JWT_SECRET from environment variables or use a dummy key
+const JWT_SECRET = process.env.JWT_SECRET || 'dummy-secret-key';
 
 // Middleware
 app.use(cors());
@@ -34,8 +35,10 @@ app.get('/', (req, res) => {
   res.send('Hello from the backend!');
 });
 
-// Server start
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// Example route to simulate database interaction
+app.get('/videos', (req, res) => {
+  res.json(mockDatabase); // Return mock data
 });
+
+// Server start
+const PORT = process
