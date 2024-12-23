@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend  # Directory where the frontend Dockerfile is located
+      dockerfile: Dockerfile  # Explicitly defining the Dockerfile if needed
+    ports:
+      - "3000:3000"  # Map the frontend port to localhost:3000
+    volumes:
+      - ./frontend:/app  # Mount the frontend directory to the container for live updates (optional)
+    environment:
+      - NODE_ENV=development  # You can set any environment variables you need
+    depends_on:
+      - backend  # Ensure backend starts before frontend
+
+  backend:
+    build:
+      context: ./backend  # Directory where the backend Dockerfile is located
+      dockerfile: Dockerfile  # Explicitly defining the Dockerfile if needed
+    ports:
+      - "5000:5000"  # Map the backend port to localhost:5000
+    volumes:
+      - ./backend:/app  # Mount the backend directory to the container for live updates (optional)
+    environment:
+      - NODE_ENV=development  # You can set any environment variables you need
+    networks:
+      - app-network  # Define a custom network for the services to communicate
+
+networks:
+  app-network:  # Custom network to allow the frontend and backend to communicate with each other
+    driver: bridge
